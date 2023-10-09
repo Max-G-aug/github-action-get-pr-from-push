@@ -13,6 +13,7 @@ export default function setOutput(pr: PR | null): void {
     setOutputWithDebug('pr', JSON.stringify(pr))
     setOutputWithDebug('pr_title', pr.title)
     setOutputWithDebug('pr_body', pr.body)
+    setOutputWithDebug('pr_body_flat', pr.body.replaceAll('\r\n', ' ').replaceAll('\r', ' ').replaceAll('\n', ' '))
     setOutputWithDebug('pr_url', pr.html_url)
     setOutputWithDebug('pr_created_at', pr.created_at)
     setOutputWithDebug('pr_merged_at', pr.merged_at)
